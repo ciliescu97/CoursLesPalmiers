@@ -1,21 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
 :root {
   --pink: #ffd1dc;
   --blue: #c8d7f4;
   --dark: #333;
   --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --gold: #d4af37;
 }
 
 * {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(120deg, var(--pink), var(--blue));
-  color: var(--dark);
-  line-height: 1.6;
-}
+  body {␊
+  margin: 0;␊
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, var(--pink), var(--blue));␊
+  color: var(--dark);␊
+  line-height: 1.6;␊
+}␊
 
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
@@ -252,6 +252,96 @@ h1, h2, h3 {
 .whatsapp-float:hover {
   transform: scale(1.1);
   color: #fff;
+}
+
+/* Qui sommes-nous page */
+.about-section {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-text, .about-image {
+  flex: 1 1 50%;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInRight 1s ease both;
+}
+
+.about-img {
+  max-width: 100%;
+  height: auto;
+  border: 4px solid var(--gold);
+  border-radius: 10px;
+  animation: borderGlow 3s ease-in-out infinite alternate;
+}
+
+.about-text {
+  animation: slideInLeft 1s ease both;
+}
+
+.profile-block {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 5px solid var(--gold);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.profile-block h2 {
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.profile-quote {
+  font-style: italic;
+  font-family: 'Merriweather', serif;
+  color: #555;
+  margin-top: 1rem;
+}
+
+.secret-card {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #333;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+.about-extra {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+  .about-text, .about-image {
+    flex: 1 1 100%;
+  }
+}
+
+@keyframes borderGlow {
+  from { box-shadow: 0 0 5px rgba(212, 175, 55, 0.4); }
+  to { box-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeIn {
