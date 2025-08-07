@@ -353,3 +353,67 @@ h1, h2, h3 {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* Tarifs page */
+.pricing-section {
+  padding: 4rem 0;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.price-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.price-card i {
+  font-size: 3rem;
+  color: #ff6fa5;
+}
+
+.price-card h3 {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.price-card .price {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #ff6fa5;
+  font-weight: 700;
+}
+
+.whatsapp-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.05);
+  color: #fff;
+}
