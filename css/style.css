@@ -6,16 +6,21 @@
   --dark: #333;
   --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   --gold: #d4af37;
+  --purple: #b084cc;
+  --pink-strong: #ff6fa5;
 }
 
 * {
-  body {␊
-  margin: 0;␊
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(120deg, var(--pink), var(--blue));␊
-  color: var(--dark);␊
-  line-height: 1.6;␊
-}␊
+  background: linear-gradient(120deg, var(--pink), var(--blue));
+  color: var(--dark);
+  line-height: 1.6;
+}
 
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
@@ -422,14 +427,13 @@ h1, h2, h3 {
 .portrait-wrapper {
   position: relative;
   margin: 0 auto 3rem;
-  width: max-content;
+  max-width: 100%;
   animation: fadeInDown 1s ease forwards;
 }
 
 .portrait-img {
   display: block;
   width: 100%;
-  max-width: 280px;
   height: auto;
   object-fit: cover;
   border: 2px solid var(--gold);
@@ -437,17 +441,17 @@ h1, h2, h3 {
   box-shadow: 0 4px 12px rgba(212, 175, 55, 0.6);
 }
 
- .speech-banner {
-    background: #fff8e1;
-    color: var(--dark);
-    padding: 1rem 1.25rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 1.5rem auto 0;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-  } 
+.speech-banner {
+  background: var(--blue);
+  color: var(--dark);
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem auto 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
     
 .bio-grid {
   display: grid;
@@ -472,6 +476,16 @@ h1, h2, h3 {
   font-style: italic;
   margin-top: 1rem;
   color: #555;
+}
+
+.profile-quote.purple {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.profile-quote.pink {
+  color: var(--pink-strong);
+  font-weight: 700;
 }
 
 .bio-card:first-child {
